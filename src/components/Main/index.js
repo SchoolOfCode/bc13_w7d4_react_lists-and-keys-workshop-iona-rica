@@ -15,16 +15,17 @@ function Main() {
 
   return (
       posts.map((postObj) => {
-        return <Post> 
+        return <Post 
         key={postObj.postId}
         title={postObj.title} 
         date={postObj.date} 
         author={postObj.author} 
-        text={postObj.text} 
-        image={postObj.image}
-        </Post>
+        text={postObj.text}
+        image={postObj.image}/>
       })
   )
+  
 }
 
 export default Main;
+
