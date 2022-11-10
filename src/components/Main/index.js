@@ -21,8 +21,11 @@ function Main() {
         date={postObj.date}
         author={postObj.author}
         text={postObj.text}
-        image={postObj.image}>
-      </Post>
+        image={postObj.image}
+        highlights={postObj.highlights.map((highlight, index) => {
+          return <li key={index}>{highlight}</li>;
+        })}
+      />
     );
   });
 }
