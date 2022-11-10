@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import './index.css';
+import "./index.css";
 
-import samplePosts from '../../libs/data';
+import samplePosts from "../../libs/data";
 
-import Post from '../Post';
+import Post from "../Post";
 
 function Main() {
   const [posts, setPosts] = useState(samplePosts);
@@ -13,18 +13,18 @@ function Main() {
   //for each post return a post component
   //id = post.postId
 
-  return (
-      posts.map((postObj) => {
-        return <Post> 
+  return posts.map((postObj) => {
+    return (
+      <Post
         key={postObj.postId}
-        title={postObj.title} 
-        date={postObj.date} 
-        author={postObj.author} 
-        text={postObj.text} 
-        image={postObj.image}
-        </Post>
-      })
-  )
+        title={postObj.title}
+        date={postObj.date}
+        author={postObj.author}
+        text={postObj.text}
+        image={postObj.image}>
+      </Post>
+    );
+  });
 }
 
 export default Main;
